@@ -4,19 +4,19 @@
 
 # Code here
 
+perfect_squares = []
+number = 1
 
+while number <= 100:
+    perfect_squares.append(number**2)
+    number += 1
 
-
-
-
-
-
-
+print(perfect_squares)
 
 
 ############# Q2. For the following list:
 # Print the values that are greater than 100
-# Add 1000 to any 100s
+# Add 1000 to any number that equals to 100
 # Delete the values that are less than 100
 # Print the final list
 ############
@@ -28,17 +28,18 @@ numbers = [113, 138, 16, 112, 192, 60, 44, 100, 136, 123, 22, 142, 139, 100, 184
 
 # Code here 
 
+for i, number in enumerate(numbers):
+    if number > 100:
+        print(number)
+    elif number == 100:
+        numbers[i] += 1000
+    elif number < 100:
+        numbers.remove(number)
 
+print(numbers)
+    
 
-
-
-
-
-
-
-
-
-############# Q3. Replace the 3rd "a" in the list "WORD" with a "0" USING A FOR LOOP and print the result ############
+############# Q3. Replace every 3rd "a" in the list "STRING" with a "0" USING A FOR LOOP and print the result ############
 # Topic: lists, loops, conditions, assignment operators
 # Hint: You need to use enumerate()
 # print(word) should output: ['a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0, 'a', 'a', 0]
@@ -51,11 +52,13 @@ for char in string:
 
 # Code here
 
+i = 2
+for i, letter in enumerate(string):
+    while i < len(string):
+        string[i] = "0"
+        i += 3
 
-
-
-
-
+print(string)  
 
 
 ############# Q4. Change the price of everything to 50 USING A LOOP and print the result ############
@@ -77,11 +80,11 @@ transactions = {
 
 # Code here
 
+for person, purchase in transactions.items():
+    for item, price in purchase.items():
+        
 
-
-
-
-
+    print(transactions)
 
 
 
@@ -109,6 +112,10 @@ transactions = {
 
 # Code here
 
+for person, purchase in transactions.items():
+    print(person)
+    for item, price in purchase.items():
+        print(item, price)
 
 
 
@@ -127,10 +134,6 @@ import random
 numbers = random.sample(range(1, 1000), 999)
 
 # Code here
-
-
-
-
 
 
 
