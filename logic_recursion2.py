@@ -52,13 +52,13 @@ for char in string:
 
 # Code here
 
-i = 2
-for i, letter in enumerate(string):
-    while i < len(string):
-        string[i] = "0"
+for i, letter in enumerate(word):
+    i = 2
+    while i < len(word):
+        word[i] = 0
         i += 3
 
-print(string)  
+print(word)  
 
 
 ############# Q4. Change the price of everything to 50 USING A LOOP and print the result ############
