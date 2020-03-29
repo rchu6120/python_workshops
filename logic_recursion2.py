@@ -81,10 +81,10 @@ transactions = {
 # Code here
 
 for person, purchase in transactions.items():
-    transactions[purchase] = 50
+    for item, price in purchase.items():
+        transactions[person][item] = 50
 
 print(transactions)
-
 
 
 ############# Q5. Give every person's third purchase a 10% discount and print the result ############
@@ -112,8 +112,13 @@ transactions = {
 # Code here
 
 for person, purchase in transactions.items():
-    for item, price in purchase.items():
-        print(item, price)
+    for item, price in enumerate(purchase.items()):
+        if price == 3:
+            transactions[person][item] = transactions[person][item] * 0.9
+
+print(transactions)
+        
+        
 
 
 
