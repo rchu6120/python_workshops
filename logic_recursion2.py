@@ -81,10 +81,9 @@ transactions = {
 # Code here
 
 for person, purchase in transactions.items():
-    for item, price in purchase.items():
-        
+    transactions[purchase] = 50
 
-    print(transactions)
+print(transactions)
 
 
 
@@ -113,17 +112,8 @@ transactions = {
 # Code here
 
 for person, purchase in transactions.items():
-    print(person)
     for item, price in purchase.items():
         print(item, price)
-
-
-
-
-
-
-
-
 
 
 
@@ -135,11 +125,12 @@ numbers = random.sample(range(1, 1000), 999)
 
 # Code here
 
+smallest = numbers[0]
+for number in numbers:
+    if number < smallest:
+        smallest = number
 
-
-
-
-
+print(smallest)
 
 
 ############# Q7. Find the LARGEST number in the list below USING A FOR LOOP and print the value ############
@@ -151,4 +142,10 @@ print(numbers)
 
 # Code here
 
+largest = numbers[0]
+for number in numbers:
+    if number > largest:
+        largest = number
+
+print(largest)
 
