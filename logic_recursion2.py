@@ -112,15 +112,12 @@ transactions = {
 # Code here
 
 for person, purchase in transactions.items():
-    for item, price in enumerate(purchase.items()):
-        if price == 3:
-            transactions[person][item] = transactions[person][item] * 0.9
+    for item, price in enumerate(purchase.keys()):
+        if item == 2:
+            purchase[price] = purchase[price] * 0.9
 
 print(transactions)
         
-        
-
-
 
 ############# Q6. Find the SMALLEST number in the list 'numbers' below and print the value ############
 # Topic: lists, loops, conditions
