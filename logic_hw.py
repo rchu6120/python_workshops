@@ -15,13 +15,15 @@
 
 # Hint: You can use the try except:
 
-try:
-    user_int = input("Please enter an integer. \n")
-except:
-    while not(type(user_int) == int):
-        user_int = input("Please enter an integer! \n")
 
-if user_int % 2 == 0:
-    print("Even")
-else:
-    print("Odd")
+while True:
+    try:
+        user_int = int(input("Please enter an integer. \n"))
+        if user_int % 2 == 0:
+            print("Even")
+            break
+        else:
+            print("Odd")
+            break
+    except:
+        continue

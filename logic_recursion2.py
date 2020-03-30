@@ -114,7 +114,7 @@ transactions = {
 for person, purchase in transactions.items():
     for item, price in enumerate(purchase.keys()):
         if item == 2:
-            purchase[price] = purchase[price] * 0.9
+            purchase[price] *= 0.9
 
 print(transactions)
         
