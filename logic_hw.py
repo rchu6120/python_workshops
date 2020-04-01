@@ -18,12 +18,11 @@
 
 while True:
     try:
-        user_int = int(input("Please enter an integer. \n"))
-        if user_int % 2 == 0:
-            print("Even")
+        if int(input("Please enter an integer. \n")) % 2 == 0:
+            print("even")
             break
         else:
-            print("Odd")
+            print("odd")
             break
     except:
         continue

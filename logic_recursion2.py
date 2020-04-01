@@ -84,7 +84,7 @@ for person, purchase in transactions.items():
 
 print(transactions)
 
-# Another way to do this problem
+# Another way to solve this problem
 
 for person, purchase in transactions.items():
     for item in purchase:
@@ -124,7 +124,7 @@ for person, purchase in transactions.items():
 
 print(transactions)
         
-# Another way to do this problem
+# Another way to solve this problem
 
 for person, purchase in transactions.items():
     for i, item in enumerate(purchase):
@@ -149,7 +149,7 @@ for number in numbers:
 
 print(smallest)
 
-# Another way to do this problem
+# Another way to solve this problem
 
 print(min(numbers))
 
@@ -170,7 +170,7 @@ for number in numbers:
 
 print(largest)
 
-# Another way to do this problem
+# Another way to solve this problem
 
 print(max(numbers))
 
