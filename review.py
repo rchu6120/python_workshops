@@ -77,8 +77,8 @@ sentence = ["Hello", "my", "name", "is", "Jun.", "I", "like", "to", "say", "hell
 # Code here
 
 for count, word in enumerate(sentence):
-    if word == "Hello" or word == "hello" or word == "hello.":
-        sentence.insert((count + 1), "world")
+    if "HELLO" in word.upper():
+        sentence.insert(count + 1, "world")
 
 print(sentence)
 
