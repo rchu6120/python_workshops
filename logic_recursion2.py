@@ -33,7 +33,7 @@ for i, number in enumerate(numbers):
         print(number)
     elif number == 100:
         numbers[i] += 1000
-    elif number < 100:
+    else:
         numbers.remove(number)
 
 print(numbers)
@@ -53,10 +53,8 @@ for char in string:
 # Code here
 
 for i, letter in enumerate(word):
-    i = 2
-    while i < len(word):
+    if (i + 1) % 3 == 0:
         word[i] = 0
-        i += 3
 
 print(word)  
 
@@ -82,6 +80,14 @@ transactions = {
 
 for person, purchase in transactions.items():
     for item, price in purchase.items():
+        transactions[person][item] = 50
+
+print(transactions)
+
+# Another way to do this problem
+
+for person, purchase in transactions.items():
+    for item in purchase:
         transactions[person][item] = 50
 
 print(transactions)
@@ -118,6 +124,15 @@ for person, purchase in transactions.items():
 
 print(transactions)
         
+# Another way to do this problem
+
+for person, purchase in transactions.items():
+    for i, item in enumerate(purchase):
+        if (i + 1) % 3 == 0:
+            transactions[person][item] *= 0.9
+
+print(transactions)
+
 
 ############# Q6. Find the SMALLEST number in the list 'numbers' below and print the value ############
 # Topic: lists, loops, conditions
@@ -133,6 +148,10 @@ for number in numbers:
         smallest = number
 
 print(smallest)
+
+# Another way to do this problem
+
+print(min(numbers))
 
 
 ############# Q7. Find the LARGEST number in the list below USING A FOR LOOP and print the value ############
@@ -150,4 +169,8 @@ for number in numbers:
         largest = number
 
 print(largest)
+
+# Another way to do this problem
+
+print(max(numbers))
 
