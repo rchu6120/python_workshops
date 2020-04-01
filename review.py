@@ -53,38 +53,19 @@ transactions_by_product = {
 ### 2) Print all of Andrew's purchases along with the price ***
 # Code here 
 
-
 for person, purchase in transactions_by_person.items():
     if person == "Andrew":
         print(transactions_by_person[person])
-
-# Another way to solve this problem
-for product, person in transactions_by_product.items():
-    if product == "Andrew":
-        print(transactions_by_product[product])
-
-
-
-
-
-
-
-
-
 
 
 ### 3) Print all of sweater purchases along with the price using ***transactions_by_person***
 # Hint: you can use double for loops
 # Code here 
 
-
-
-
-
-
-
-
-
+for person, purchase in transactions_by_person.items():
+    for item, price in purchase.items():
+        if item == "sweater":
+            print(item, price)
 
 
 ### 4). Insert the string "world" after every "hello" (regardless of upper/lower casing) using a FOR loop
@@ -95,3 +76,8 @@ sentence = ["Hello", "my", "name", "is", "Jun.", "I", "like", "to", "say", "hell
 
 # Code here
 
+for count, word in enumerate(sentence):
+    if word == "Hello" or word == "hello" or word == "hello.":
+        sentence.insert((count + 1), "world")
+
+print(sentence)
