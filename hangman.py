@@ -77,10 +77,10 @@ while number_of_attempts > 0:
     else:
         # Print how many guesses they have remaining 
         print(number_of_attempts)
-
+    
     # If there are no more "False" in the dictionary
         # Let the user know that they won the game            
-
+    
                     
 
     
